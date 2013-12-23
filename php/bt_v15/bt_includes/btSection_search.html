@@ -1,0 +1,34 @@
+
+
+<!-- ###################################################### -->                   
+<!-- ############### search properties #################### -->
+<div class='cpExpandoBox colorLightBg' id="section_search">
+    <a href='#' onClick="fnExpandCollapse('box_search');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Hide from Search Results</a>
+    <div id="box_search" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+            
+            <div style='margin-bottom:10px;'>
+                This property is only used if a plugin developer needs to 
+                find screens that should, or should not be dislayed on a
+                search type plugin.
+            </div>
+        
+            <b>Hide from Search Results</b><br/>
+            <select name="json_hideFromSearch" id="json_hideFromSearch" style='width:300px;'>
+                <option value="">--select--</option>
+                <option value="0">NO, include this screen in search results</option>
+                <option value="1">YES, hide this screen from search results</option>
+            </select>
+        
+        </div>
+
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_search');return false;">
+            <div id="saveResult_search" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end search properties ################ -->
+<!-- ###################################################### -->                   

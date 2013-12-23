@@ -1,0 +1,93 @@
+
+
+<!-- ############### background image properties ######### -->
+<!-- ##################################################### -->
+<div class='cpExpandoBox colorLightBg' id="section_backgroundImage">
+    <a href='#' onClick="fnExpandCollapse('box_backgroundImage');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Screen Background Image</a>
+    <div id="box_backgroundImage" style="display:none;">
+            
+        <table style='padding-top:10px;'>
+            
+            <tr>
+                <td colspan='3' style='vertical-align:top;padding-left:0px;'>
+                    Image File Names or Image URL (web address)?
+                    <hr>
+                    Use an Image File Name or an Image URL - NOT BOTH.
+                    If you choose to use an Image File Name (and not a URL), you'll need to add the image to
+                    the Xcode or Eclipse project after you download the code for your app. The Image File Name value you
+                    enter in the control panel must match the file name of the image in your
+                    project. Example: mybackground.png. Do not use image file names that contain spaces or special characters.
+                    <hr>
+                    If you use a URL (and not an Image File Name), the image will be downloaded from the URL then stored on the device
+                    for offline use. The Image URL should end with the name of the image file itself. 
+                    Example: www.mysite.com/images/mybackground.png.  You'll need to figure out whether or not
+                    it's best to include them in the project or use URL's, both approaches make sense, depending on your
+                    design goals.
+                </td>                
+            </tr>
+            
+            
+            <tr>	
+                <td class='tdSort' style='padding-left:0px;font-weight:bold;padding-top:10px;'>Small Device</td>
+                <td class='tdSort' style='padding-left:25px;font-weight:bold;padding-top:10px;'>Large Device</td>
+                <td class='tdSort' style='padding-left:25px;font-weight:bold;padding-top:10px;'>Extras</td>
+            </tr>
+            <tr>
+                <td style='vertical-align:top;padding-left:0px;padding-top:15px;'>
+                
+                   <b>Image File Name</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileName('json_backgroundImageNameSmallDevice', '/images');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_backgroundImageNameSmallDevice" id="json_backgroundImageNameSmallDevice" value="" />
+                    
+                    <br/><b>Image URL</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileURL('json_backgroundImageURLSmallDevice', '/images');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_backgroundImageURLSmallDevice" id="json_backgroundImageURLSmallDevice" value="" />
+                </td>
+                <td style='vertical-align:top;padding-left:25px;padding-top:15px;'>
+                   
+                   <b>Image File Name</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileName('json_backgroundImageNameLargeDevice', '/images');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_backgroundImageNameLargeDevice" id="json_backgroundImageNameLargeDevice" value="" />
+                    
+                    <br/><b>Image URL</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileURL('json_backgroundImageURLLargeDevice', '/images');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_backgroundImageURLLargeDevice" id="json_backgroundImageURLLargeDevice" value="" />
+                 </td>
+                <td style='vertical-align:top;padding-left:25px;padding-top:15px;'>
+                    
+                    <b>Scale / Position</b><br/>
+                    <select name="json_backgroundImageScale" id="json_backgroundImageScale" style="width:150px;">
+                            <option value="">--select--</option>
+                            <option value="center">center</option>
+                            <option value="fullScreen">Full Screen</option>
+                            <option value="fullScreenPreserve">Full Screen, Preserve Ratio</option>
+                            <option value="top">Top Middle</option>
+                            <option value="bottom">Bottom Middle</option>
+                            <option value="topLeft">Top Left</option>
+                            <option value="topRight">Top Right</option>
+                            <option value="bottomLeft">Bottom Left</option>
+                            <option value="bottomRight">Bottom Right</option>
+                    </select>
+                </td>
+                  
+            </tr>
+        </table>
+            
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_backgroundImage');return false;">
+            <div id="saveResult_backgroundImage" class="submit_working">&nbsp;</div>
+        </div>
+        
+    </div>
+  </div>
+
+<!-- ############### end background image properties ##### -->
+<!-- ##################################################### -->  

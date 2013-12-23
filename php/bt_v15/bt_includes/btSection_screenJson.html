@@ -1,0 +1,37 @@
+
+
+<!-- ###################################################### -->                   
+<!-- ############### screen json  ######################### -->
+<div class='cpExpandoBox colorLightBg' id="section_screenJson">
+    <a href='#' onClick="fnExpandCollapse('box_screenJson');return false;"><img src='../../images/arr_right.gif' alt='arrow' />JSON Configuration Data (Editable)</a>
+    <div id="box_screenJson" style="display:block;">
+        
+        <div style='padding-top:10px;'>
+
+            <div style='color:red;'>
+                IMPORTANT
+            </div>
+            <div style='padding-top:5px;'>    
+                <li>Do not modify this JSON data unless you know what you're doing, it's meant for developers.</li>
+                <li>Do not change the itemId or the itemType in this JSON.</li>
+                <li>Do not paste arrays in this JSON (such as childItems). It only supports simple property/value pairs.</li>
+            	<li>Validate your entries with this <a href="http://www.jsonlint.com" target="_blank">JSON Validator tool</a> if you run into trouble.</li>
+            </div>
+            
+            <div style='padding-top:10px;'>
+                <textarea name="screenJson" id="screenJson" style="font-family:monospace;font-size:10pt;width:99%;height:250px;"></textarea>
+            </div>
+            
+        </div>
+        
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_screenJson');return false;">
+            <div id="saveResult_screenJson" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### screen json  ######################### -->
+<!-- ###################################################### -->
+                
+                                   

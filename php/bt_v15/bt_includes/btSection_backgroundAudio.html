@@ -1,0 +1,53 @@
+
+
+<!-- ##################################################### -->                   
+<!-- ############### background audio properties ######### -->
+<div class='cpExpandoBox colorLightBg' id="section_backgroundAudio">
+    <a href='#' onClick="fnExpandCollapse('box_backgroundAudio');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Background Audio</a>
+    <div id="box_backgroundAudio" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+            Background audio is not available on Android (iOS only). 
+        </div>
+        
+        <table style='margin-top:10px;'>
+            <tr>
+                <td style='vertical-align:top;'>
+    
+                    <b>Audio File Name</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileName('json_audioFileName', '/audio');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_audioFileName" id="json_audioFileName" value="" />
+                    
+                    <br/><b>Audio File URL</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickFileURL('json_audioFileURL', '/audio');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    </br>            
+                    <input type="text" name="json_audioFileURL" id="json_audioFileURL" value="" />
+                </td>
+                <td style='vertical-align:top;'>
+                
+                    <b>Audio Number of Loops</b> (number)<br/>
+                    <input type="text" name="json_audioNumberOfLoops" id="json_audioNumberOfLoops" value="" />
+                    
+                    <br/><b>Audio Stops with "Back Button"</b><br/>
+                    <select name="json_audioStopsOnScreenExit" id="json_audioStopsOnScreenExit" style="width:250px;">
+                        <option value="">--select--</option>
+                        <option value="1">Yes, stop audio on screen exit</option>
+                        <option value="0">No, keep playing on screen exit</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_backgroundAudio');return false;">
+            <div id="saveResult_backgroundAudio" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end background audio properties ##### -->
+<!-- ##################################################### -->

@@ -1,0 +1,35 @@
+
+
+<!-- ###################################################### -->                   
+<!-- ############### advertisment properties ############## -->
+<div class='cpExpandoBox colorLightBg' id="section_ads">
+    <a href='#' onClick="fnExpandCollapse('box_ads');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Advertising Options</a>
+    <div id="box_ads" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+
+            <div style='margin-bottom:10px;'>
+                This property is only available on apps that use the native 
+                iOS iAd service. This means it's ignored on Android.
+                Use a third party SDK for other advertising options.
+            </div>
+
+            <b>Include Advertisements on this Screen</b><br/>
+            <select name="json_includeAds" id="json_includeAds" style='width:250px;'>
+                <option value="">--select--</option>
+                <option value="0">NO, do not include advertisements on this screen</option>
+                <option value="1">YES, include advertisements on this screen</option>
+            </select>
+            <br/>
+
+        </div>
+        
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_advertisments');return false;">
+            <div id="saveResult_advertisments" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end advertistement properties ######## -->
+<!-- ###################################################### -->                   

@@ -1,0 +1,109 @@
+
+<!-- ##################################################### -->                   
+<!-- ############### document behavior ################### -->
+<div class='cpExpandoBox colorLightBg' id="section_childItems">
+    <a href='#' onClick="fnExpandCollapse('box_childItems');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Document Behavior</a>
+    <div id="box_childItems" style="display:none;">
+
+    	<table style='margin-top:10px;'>
+        	<tr>
+              	<td style='vertical-align:top;'>
+              
+                   <b>Show Browser Back Button</b><br/>
+                    <select name="json_showBrowserBarBack" id="json_showBrowserBarBack" style="width:250px;">
+                        <option value="">--select--</option>
+                        <option value="0">No, do not show</option>
+                        <option value="1">Yes, show the button</option>
+                    </select>
+                    
+                    <br/><b>Show Browser Refresh Button</b><br/>
+                    <select name="json_showBrowserBarRefresh" id="json_showBrowserBarRefresh" style="width:250px;">
+                        <option value="">--select--</option>
+                        <option value="0">No, do not show</option>
+                        <option value="1">Yes, show the button</option>
+                    </select>
+                    
+                    <br/><b>Show Launch in Native App Button</b><br/>
+                    <select name="json_showBrowserBarLaunchInNativeApp" id="json_showBrowserBarLaunchInNativeApp" style="width:250px;">
+                        <option value="">--select--</option>
+                        <option value="0">No, do not show</option>
+                        <option value="1">Yes, show the button</option>
+                    </select>
+        
+                    <br/><b>Show Email Document Link</b><br/>
+                    <select name="json_showBrowserBarEmailDocument" id="json_showBrowserBarEmailDocument" style="width:250px;">
+                        <option value="">--select--</option>
+                        <option value="0">No, do not show</option>
+                        <option value="1">Yes, show the button</option>
+                    </select>
+    
+                </td>
+             	<td style='vertical-align:top;padding-left:25px;'>
+                          
+                    <b>Force Refresh</b><br/>
+                    <select name="json_forceRefresh" id="json_forceRefresh" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="1">Yes, force refresh (document at URL does cache)</option>
+                        <option value="0">No, do not force refresh (document at URL does cache)</option>
+
+                    </select>
+        
+                    <br/><b>Detect Phone / Address links</b><br/>
+                    <select name="json_dataDetectorType" id="json_dataDetectorType" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, ignore phone and address links</option>
+                        <option value="1">Yes, detect phone and address links</option>
+                    </select>
+                    
+                    <br/><b>Prevent All Scrolling</b><br/>
+                    <select name="json_preventAllScrolling" id="json_preventAllScrolling" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, allow scrolling</option>
+                        <option value="1">Yes, prevent scrolling</option>
+                    </select>
+        
+                    <br/><b>Hide Vertical Scroll Bar</b><br/>
+                    <select name="json_hideVerticalScrollBar" id="json_hideVerticalScrollBar" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, show vertical scroll bar</option>
+                        <option value="1">Yes, hide vertical scroll bar</option>
+                    </select>
+
+                </td>
+               	<td style='vertical-align:top;padding-left:25px;'>
+                    
+                    <b>Hide Horizontal Scroll Bar</b><br/>
+                    <select name="json_hideHorizontalScrollBar" id="json_hideHorizontalScrollBar" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, show horizontal scroll bar</option>
+                        <option value="1">Yes, hide horizontal scroll bar</option>
+                    </select>
+        
+                    <br/><b>Prevent Scroll Bounce</b><br/>
+                    <select name="json_preventScrollBounce" id="json_preventScrollBounce" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, allow scroll bounce</option>
+                        <option value="1">>Yes, prevent scroll bounce</option>
+                    </select>
+        
+                    <br/><b>Prevent All Interactions</b><br/>
+                    <select name="json_preventUserInteraction" id="json_preventUserInteraction" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="0">No, allow interaction</option>
+                        <option value="1">Yes, prevent interaction</option>
+                    </select>
+    
+                </td>
+            </tr>
+        </table>     
+        
+        <div style="padding-top:5px;">
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_docBehavior');return false;">
+            <div id="saveResult_docBehavior" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end document behavior  ############## -->
+<!-- ##################################################### --> 
+

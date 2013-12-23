@@ -1,0 +1,34 @@
+
+
+<!-- ##################################################### -->                   
+<!-- ############### login properties #################### -->
+<div class='cpExpandoBox colorLightBg' id="section_login">
+    <a href='#' onClick="fnExpandCollapse('box_login');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Require Login</a>
+    <div id="box_login" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+            
+            <div style='margin-bottom:10px;'>
+                This property allows you to require a login to access a screen. This
+                property is ignored if this screen is the home-screen on a tab (if the app uses tabs). 
+                Using this property also means the app will have a login screen somewhere.
+            </div>
+            
+            <b>Login Required</b><br/>
+            <select name="json_loginRequired" id="json_loginRequired" style="width:250px;">
+                <option value="">--select--</option>
+                <option value="0">No, do not require a login</option>
+                <option value="1">Yes, require a login</option>
+            </select>
+       
+       </div>
+
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_login');return false;">
+            <div id="saveResult_login" class="submit_working">&nbsp;</div>
+        </div>
+ 
+    </div>
+</div>
+<!-- ############### end login properties ################ -->
+<!-- ##################################################### -->

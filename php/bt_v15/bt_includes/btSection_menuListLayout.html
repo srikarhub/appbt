@@ -1,0 +1,77 @@
+
+
+<!-- ##################################################### -->                   
+<!-- ############### menu layout properties ############## -->
+<div class='cpExpandoBox colorLightBg' id="section_menuListColor">
+    <a href='#' onClick="fnExpandCollapse('box_menuListColor');return false;"><img src='../../images/arr_right.gif' alt='arrow' />List Layout, Color</a>
+    <div id="box_menuListColor" style="display:none;">
+        
+        <table style='margin-top:10px;'>
+            
+            <tr>
+                <td style='vertical-align:top;'>
+
+                    <b>List Background Color</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_listBackgroundColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_listBackgroundColor" id="json_listBackgroundColor" value="" />
+                
+                    <br/><b>Row Background Color</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_listRowBackgroundColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_listRowBackgroundColor" id="json_listRowBackgroundColor" value="" />
+                
+                    <br/><b>Row Font Color Title</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_listTitleFontColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_listTitleFontColor" id="json_listTitleFontColor" value="" />
+                
+                    <br/><b>Row Separator Color</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_listRowSeparatorColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_listRowSeparatorColor" id="json_listRowSeparatorColor" value="" />
+                
+                
+                
+                <td style='vertical-align:top;padding-left:25px;'>
+                
+                    <b>List Style</b><br/>
+                    <select name="json_listStyle" id="json_listStyle" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="plain">Square Corners, no margin</option>
+                        <option value="round">Rounded Corners, with side margins</option>
+                    </select>
+                
+                    <br/><b>Prevent Scrolling</b><br/>
+                        <select name="json_preventAllScrolling" id="json_preventAllScrolling" style='width:250px;'>
+                            <option value="">--select--</option>
+                            <option value="0">No, allow scrolling</option>
+                            <option value="1">Yes, prevent scrolling</option>
+                        </select>
+                        
+                    <br/><b>Row Select Style</b><br/>
+                    <select name="json_listRowSelectionStyle" id="json_listRowSelectionStyle" style='width:250px;'>
+                        <option value="">--select--</option>
+                        <option value="blue">Blue selection</option>
+                        <option value="gray">Gray selection</option>
+                        <option value="none">No selection</option>
+                    </select>
+                
+                 </td>
+           </tr>
+       </table>
+
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_menuListColor');return false;">
+            <div id="saveResult_menuListColor" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end menu layout properties ########## -->
+<!-- ##################################################### -->
+

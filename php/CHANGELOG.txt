@@ -1,0 +1,243 @@
+
+Change Log: Buzztouch 3.0
+November 26, 2013
+David Book, buzztouch.com
+
+	Updates:
+
+--	Improved project download screen. Project download screen now allows app owners to select which version
+	of the Buzztouch Core (iOS or Android) to use as the basis for the download. v2.0 or v3.0
+	
+--	Major changes and newly introduced files to support new plugin package architechture. 
+
+	bt_screens.php, bt_screen.php,	bt_childItem.php, bt_JSON_API_AJAX.php, bt_screen_json.php, app_screens.js, app_screen.js
+	
+	/BT-server/bt_v15/bt_app/bt_screens.php	
+		This is the master list of screens for an app. This screen has been updated and now allows
+		an app owner to quickly and easily adjust the "raw" JSON data for any screen. New arbitrary
+		values can be added / introduced regardless of how the plugin landing page is configured. 
+				
+	/BT-server/bt_v15/bt_app/bt_screen.php 	
+		This new file serves as the landing page for all plugins. Plugin packages no longer use 
+		an index.php page. screen.php page is used instead.
+
+	/BT-server/bt_v15/bt_app/bt_childItem.php 	
+		This new file serves as the pop-up page when working with a child item. This is different than
+		modifying a childItem's JSON using the "raw" pop-up. This bt_childItem.php page is used by 
+		plugin developers to show individual form elements making it easier for an app owner to understand.
+	
+	/BT-server/bt_v15/bt_app/bt_JSON_API_AJAX.php 
+		This new file is used to save screen data. Plugin developers use javascript functions in app_screen.js
+		to interact with the API methods in the bt_JSON_API_AJAX.php file. 
+	
+	/BT-server/bt_v15/bt_app/bt_screen_json.php
+		This new file is used as the "pop up window" when working with raw JSON data from screens.php
+		
+	/BT-server/bt_v15/bt_scripts/app_screens.js
+		This new file is the javscript file used in conjuction with screens.php
+		
+	/BT-server/bt_v15/bt_scripts/app_screen.js
+		This new file is the javscript file used in conjuction with screens.php. It includes javascript
+		routines used by plugin developers to make modifications to backend data related to each screen. It
+		works in conjunction with bt_JSON_API_AJAX.php.
+		
+--	Picker Screens. bt_pickerColor.php, bt_pickerScreen.php, bt_pickerMenu.php, bt_pickerFile.php
+	These screens have been updated and simplified. Plugin developers no longer link to these files
+	directly using an anchor tag. Instead, javscript functions are called to open each picker screen. 
+	Javscript routines are named: fnPickColor(), fnPickScreen(), fnPickMenu(), fnPickFile() and each
+	takes some arguments. See /BT-server/bt_v15/bt_scripts/app_screen.js for a detailed list. 
+	
+-- 	Plugin Sections: The /BT-server/bt_v15/bt_includes folder contains many new .html files. Each of these
+	files is used by screen.php to manipulate common properties when working with screen in a control
+	panel. Example: bt_section_bacgkroundColor.html, bt_section_tabBar.html, bt_section_dataURL.html
+	Plugin developers can use these include files in their plugin packages or create their own. 
+	
+--	Plugin upload process: The plugin upload process is handled by Admin > pluginsUpdate.php and 
+	pluginsUpdates_AJAX.php. The upload process will no longer allow .php files (no .php files) in the
+	uploaded package. If a .php file is necessary, control panel owners can include it in the package, 
+	upload the package using FTP, then run the "refresh plugins" routine. If an index.php page is found
+	it will be used as the landing page for that plugin. Else, the standard landing screen will be used. 
+	
+--	class.Plugin.php: The /BT-server/includes/class.Plugin.php file was modified to account for some changes in the fnCheckPluginContents() and
+	fnGetPluginInfo() routines. 
+	
+--	Install / Update process: /BT-server/install/db.php was modified to add or alter the plugins table. A
+	new column was introduced - landingPage. The landingPage colum holds one of three values. blank (empty string
+	or null), bt_screen.php or index.php. The landing page for a plugin is determined by the value of this field. 
+	
+		landingPage column value: "bt_screen.php" is the standard value and the "new approach." When the 
+		"refresh plugin" routine is	used this value will be set to "bt_screen.php." If NO index.php page is 
+		included in a plugin package package. If an	index.php page is included it will be set to "index.php." 
+		If it is null, or an empty string, the bt_screen.php file will be used as the plugins landing page. 
+		This column and logic was introduced to allow for some flexibility and some backwards compatibility. 
+		
+		  
+		
+	
+
+
+Change Log: Buzztouch 2.1.9
+August 25, 2013
+David Book, buzztouch.com
+
+	Updates:
+
+--	Improved project download screen. Project download screen now allows app owners to select which plugins
+	to include in the download and which parnter SDK instructions to include. 
+
+-- 	Added Menus screen to allow app owners to create menus. Menus are a new JSON items that appear in the
+	BT_config.txt file and are used when selecting a Context Menu for a screen in the control panel. 
+
+--	Added support for "check all plugins for updates" so admins don't need to click each plugin
+	individually, one by one in order to check for updates. 
+
+--	Updated bt_pickerMenu.php and bt_pickerScreen.php to accomodate for apostrophe's in nicknames. These picker
+	dialogues where failing if a user "selected" a screen using the picker. 
+	
+--	Fixed index.php page in the /root of the install. This is the login page. This script
+	re-directs logged in users to the /account directory after successfully logging in. The
+	re-direct URL included a rogue / (backslash) character that was causing issues. Fixed.
+
+-- 	Improved bt_pickerScreen.php. This is the pop-up window used to select a screen to load
+	using the "select" options in lots of places in the control panel. It was super slow!
+	
+--	Re-named all the .js files in the /bt_v15/ bt_scripts folder
+
+
+
+
+
+
+Change Log: Buzztouch 2.1.8
+February 06, 2013
+David Book, buzztouch.com
+
+	Updates:
+
+--	The config table in the database is no longer used. The config.txt file in the root
+	of the project holds all configuration settings. This makes it easier for users
+	to understand what their changing. 
+	
+-- 	The database has two additional tables. bt_apn_devicesa and bt_apn_queue, these are necessary
+	to support Push Notifications. 
+	
+--	Application control panels now include a Usage Map and a download data screen. In most cases
+	a Google Maps API Key will be required to power the map. 
+	
+--	Application control have two new screens to manage Push Notifications and Registered Devices.
+
+--	Application control panels have a new screen for Live / Design mode. Compiling apps in 
+	Design mode allows app owners to make changes to their configuration data without affecting
+	apps that are already published. 
+
+--	Application Theme: When you click "Theme" in an application control panel, you'll be taken
+	to the current active theme and not the list of themes. In most cases only one theme is used
+	anyway and this saves a few clicks.
+	
+--	The plugin management process (admin control panel) is greatly improved. You can now download
+	and install and update plugins with a few clicks. You can also import plugins from your
+	buzztouch.com control panel.
+
+
+
+
+Change Log: Buzztouch 2.1.7
+June 16, 2012
+David Book, buzztouch.com
+
+	Updates:
+
+--	Remove @set_time_limit function calls. This is not supported by many shared hosts. 
+	Changed files: 
+	/BT-server/bt_v15/bt_app/bt_appDownload_AJAX.php
+	/BT-server/includes/class.Imageresize.php
+
+--	When uploading an app's icon, .png icons were being saved with .jpg extenstion 
+	instead of the .png extension. 
+	Changed files: 
+	/BT-server/bt_v15/bt_app/bt_icon.php
+
+--	Syntax error in fnCanManageApp()
+	Changed files: 
+	/BT-server/includes/class.App.php
+	
+--	Updated graphics on application source code download screen to match the 
+	buzztouch.com hosted version. 
+	Changed files:
+	/BT-server/bt_v15/bt_app/bt_appDownload.php
+	/BT-server/images/package_ios.png
+	/BT-server/images/download_ios.png
+	/BT-server/images/package_android.png
+	/BT-server/images/download_ios.png
+
+--	Miscellaneous typos fixed.
+	Changed files:
+	/BT-server/admin/about.php
+	/BT-server/admin/maintenance_AJAX.php
+	/BT-server/install/index.php
+	/BT-server/install/install_2.php
+	/BT-server/install/install_3.php
+	/BT-server/install/settings.php
+	/BT-server/install/db.php
+
+--	When download a projects source code the imagecreatefromjpeg was breaking on
+	hosts that did not support allow_url_open when calling the function with a URL. 
+	Changed Files:
+	/BT-server/bt_v15/bt_app/bt_appDownload_AJAX.php
+
+-- All the HTML pages in the package were setting the "viewport" meta tags. This was
+	causing some CSS validation	issues. This software was not designed to run on a 
+	mobile device anyway so removing this meta tag has no affect.
+	Changed Files:
+	/BT-server/includes/class.Page.php
+	
+-- Syntax error. 
+	Changed Files:
+	/BT-server/includes/class.Page.php
+	
+--	Removed mb_detect_encoding function calls because not all PHP installs have this 
+	feature turned on. 
+	Changed Files:
+	/BT-server/install/index.php
+	/BT-server/includes/utilityFunctions.php
+
+--	When creating new apps the default theme had an empty itemType and itemId in the JSON data.
+ 	Changed Files:
+	/BT-server/bt_v15/bt_app/bt_appNew.php
+
+--	A broken link was causing a screen to 'download' instead of opening in the browser window.
+ 	Changed Files:
+	/BT-server/bt_v15/bt_app/index.php
+
+--	Error Printing was on be default. It's off now. The config.php -> handleShutdown() 
+	method needs to be uncommented to show errors. It now does not print any page error
+	information at the bottom of the screen unless the "info" in the method
+	are uncommented. The handleShutdown() method is on line 95.
+ 	Changed Files:
+	/BT-server/config.php
+
+--	When a new screen was added it was overwriting the app's default home screen.
+ 	Changed Files:
+	/BT-server/bt_v15/bt_app/bt_screens.php
+
+--	4 broken links fixed that should have opened the File Manager.
+	Changed files:
+	/BT-server/bt_v15/bt_app/bt_quizBehavior.php
+	
+--	Syntax error fixed.
+	Changed files:
+	/BT-server/bt_v15/bt_app/bt_pickerFile.php
+
+--	Missing text in Forgot Password email when sending to a Gmail address. 
+	The mailer class was not setting the proper content type for messages that did not
+	contain an alt body. The class is no longer setting the content type to "multipart/alternative" 
+	when sending plain text emails.
+	Changed Files:
+	/BT-server/includes/class.Phpmailer.php
+
+
+
+
+
+
+

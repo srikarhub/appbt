@@ -1,0 +1,37 @@
+
+<!-- ##################################################### -->                   
+<!-- ############### background color properties ######### -->
+<div class='cpExpandoBox colorLightBg' id="section_backgroundColor">
+    <a href='#' onClick="fnExpandCollapse('box_backgroundColor');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Screen Background Color</a>
+    <div id="box_backgroundColor" style="display:none;">
+        
+       <table style='padding-top:15px;'>
+
+            <tr>
+                <td style='vertical-align:top;padding-left:0px;'>
+                    Enter "clear" (without quotes) for a transparent background. 
+                    All other colors should be entered in hex format, include the # character like: #FFCC66.
+                </td>                
+            </tr>
+            <tr>
+                <td style='vertical-align:top;padding-left:0px;padding-top:5px;'>
+                     
+                    <b>Color</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_backgroundColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_backgroundColor" id="json_backgroundColor" value="" />
+    
+                </td>
+            </tr>
+        </table>
+
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_backgroundColor');return false;">
+            <div id="saveResult_backgroundColor" class="submit_working">&nbsp;</div>
+        </div>
+        
+    </div>
+ </div>
+<!-- ############### end background color properties ##### -->
+<!-- ##################################################### --> 

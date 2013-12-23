@@ -1,0 +1,37 @@
+
+
+<!-- ###################################################### -->                   
+<!-- ############### tab bar properties ################### -->
+<div class='cpExpandoBox colorLightBg' id="section_tabBar">
+    <a href='#' onClick="fnExpandCollapse('box_tabBar');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Tab Bar</a>
+    <div id="box_tabBar" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+
+            <div style='margin-bottom:10px;'>
+                Not all apps use tab bars. When used, iOS tab bars are at the bottom of the 
+                screen. Android tab bars are at the top of the screen. This
+                "hide tab bar when screen loads" property does not apply if this
+                screen is the home-screen for a tab. Android apps require
+                BT v3.0 or above to support this property.
+            </div>
+
+            <b>Hide Tab Bar When Screen Loads</b><br/>
+            <select name="json_hideTabBarWhenScreenLoads" id="json_hideTabBarWhenScreenLoads" style='width:350px;'>
+                <option value="">--select--</option>
+                <option value="0">NO, do not hide the tab bar when this screen loads</option>
+                <option value="1">YES, hide the tab bar when this screen loads</option>
+            </select>
+            <br/>
+
+        </div>
+        
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_tabBar');return false;">
+            <div id="saveResult_tabBar" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end tab bar properties ############### -->
+<!-- ###################################################### -->                   

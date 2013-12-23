@@ -1,0 +1,31 @@
+
+
+<!-- ##################################################### -->                   
+<!-- ############### nickname property ################### -->
+<div class='cpExpandoBox colorLightBg' id="section_nickname">
+    <a href='#' onClick="fnTogglePropertyBox('box_nickname');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Screen Nickname</a>
+    <div id="box_nickname" style="display:none;">
+        
+        <div style='padding-top:10px;'>
+            
+            <div style='margin-bottom:10px;'>	
+                Nicknames help you keep things organized. When choosing nicknames
+                it's best to use a naming strategy so can search for things later. 
+                Example: If all your menu type screens used a nickname that began with the word
+                Menu, such as "Menu Home" or "Menu Contact" or "Menu Settings" you could
+                easily find all your menu screens by searcing for "Menu". 
+            </div>
+            
+            <b>Enter a Nickname</b><br/>
+            <input type="text" name="json_itemNickname" id="json_itemNickname" value="">
+        </div>
+        
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" class="buttonSubmit" onClick="saveJSONProperties('saveResult_nickname');return false;">
+            <div id="saveResult_nickname" class="submit_working">&nbsp;</div>
+        </div>
+            
+    </div>    
+</div>
+<!-- ############### end nickname property ############### -->
+<!-- ##################################################### --> 

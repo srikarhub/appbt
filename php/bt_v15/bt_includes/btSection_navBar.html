@@ -1,0 +1,112 @@
+
+
+<!-- ##################################################### -->                   
+<!-- ############### navBar properties ################### -->
+<div class='cpExpandoBox colorLightBg' id="section_navBar">
+    <a href='#' onClick="fnExpandCollapse('box_navBar');return false;"><img src='../../images/arr_right.gif' alt='arrow' />Top Navigation Bar</a>
+    <div id="box_navBar" style="display:none;">
+    
+        <table style='margin-top:10px;'>
+            <tr>
+                <td style='vertical-align:top;white-space:nowrap;'>
+    
+                    <b>Bar Title</b><br/>
+                    <input type="text" name="json_navBarTitleText" id="json_navBarTitleText" value="" style="width:225px;"/>
+            
+                    <br/><b>Background Color</b>
+                    &nbsp;&nbsp;
+                    <a href="#" onClick="fnPickColor('json_navBarBackgroundColor');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_navBarBackgroundColor" id="json_navBarBackgroundColor" value="" style="width:225px;">
+                
+                    <br/><b>Bar Style</b><br/>
+                    <select name="json_navBarStyle" id="json_navBarStyle" style="width:225px;">
+                        <option value="">--select--</option>
+                        <option value="solid">Solid  navigation bar</option>
+                        <option value="transparent">Transparent navigation bar</option>
+                        <option value="hidden">Hide the navigation bar</option>
+                    </select>
+                
+                </td>
+                <td style='vertical-align:top;white-space:nowrap;'>
+                
+                    <b>Right Button Type</b><br/>
+                    <select name="json_navBarRightButtonType" id="json_navBarRightButtonType" style="width:225px;" >
+                        <option value="">--select--</option>
+                        <option value="">No right button in nav bar</option>
+                        <option value="home">Home</option>
+                        <option value="next">Next</option>
+                        <option value="infoLight">Info Light</option>
+                        <option value="infoDark">Info Dark</option>
+                        <option value="details">Details</option>
+                        <option value="done">Done</option>
+                        <option value="cancel">Cancel</option>
+                        <option value="save">Save</option>
+                        <option value="add">Add</option>
+                        <option value="addBlue">Add Blue</option>
+                        <option value="compose">Compose</option>
+                        <option value="reply">Reply</option>
+                        <option value="action">Action</option>
+                        <option value="organize">Organize</option>
+                        <option value="bookmark">Bookmark</option>
+                        <option value="search">Search</option>
+                        <option value="refresh">Refresh</option>
+                        <option value="camera">Camera</option>
+                        <option value="trash">Trash</option>
+                        <option value="play">Play</option>
+                        <option value="pause">Pause</option>
+                        <option value="stop">Stop</option>
+                        <option value="rewind">Rewind</option>
+                        <option value="fastForward">Fast Forward</option>
+                    </select>
+        
+                    <br/><b>Button Load Screen</b>         
+                        &nbsp;&nbsp;
+                        <a href="#" onClick="fnPickScreen('json_navBarRightButtonTapLoadScreenItemId', 'json_navBarRightButtonTapLoadScreenNickname');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_navBarRightButtonTapLoadScreenNickname" id="json_navBarRightButtonTapLoadScreenNickname" value="" style="width:225px;">
+                    <input type="hidden" name="json_navBarRightButtonTapLoadScreenItemId" id="json_navBarRightButtonTapLoadScreenItemId" value="">
+                    
+                    <br/><b>Button Transition Type</b><br/>
+                    <select name="json_navBarRightButtonTapTransitionType" id="json_navBarRightButtonTapTransitionType" style="width:225px;" />
+                        <option value="">--select--</option>
+                        <option value="">Default transition</option>
+                        <option value="fade">Fade</option>
+                        <option value="flip">Flip</option>
+                        <option value="curl">Curl</option>
+                        <option value="grow">Grow</option>
+                        <option value="slideUp">Slide Up</option>
+                        <option value="slideDown">Slide Down</option>
+                    </select>
+                </td>
+                
+                <td style='vertical-align:top;white-space:nowrap;'>
+                   <b>Context Menu</b>         
+                        &nbsp;&nbsp;
+                        <a href="#" onClick="fnPickMenu('json_contextMenuItemId', 'json_contextMenuNickname');return false;"><img src="../../images/arr_right.gif" alt="arrow"/>Select</a>
+                    <br/>
+                    <input type="text" name="json_contextMenuNickname" id="json_contextMenuNickname" value="" style="width:225px;">
+                    <input type="hidden" name="json_contextMenuItemId" id="json_contextMenuItemId" value="">
+                
+                    <div style='width:275px;padding-top:5px;'>
+                        Context Menu requires BT v3.0 or above.
+                        <br/>Android: Shows with Action Bar Items
+                        <br/>iOS: Adds a menu icon to top nav bar.
+                    </div>
+                </td>
+
+                
+            </tr>
+        </table>
+                         
+        <div class='boxButton'>
+            <input type='button' title="save" value="save" align='absmiddle' class="buttonSubmit" onClick="saveAdvancedProperty('saveResult_navBar');return false;">
+            <div id="saveResult_navBar" class="submit_working">&nbsp;</div>
+        </div>
+    
+    </div>
+</div>
+<!-- ############### end navBar properties ############### -->
+<!-- ##################################################### -->
+
+
